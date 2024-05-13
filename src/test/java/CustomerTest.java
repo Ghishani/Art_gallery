@@ -1,18 +1,25 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class CustomerTest {
 
-    @Test
-    public void hasName() {
-        Customer maria = new Customer("Maria", 200);
-        Customer ghishani = new Customer("Ghishani", 400);
-        assertThat(maria.getName()).isEqualTo("Maria", 200);
+    Customer ghishani;
+
+    @BeforeEach
+    public void setup() {
+        ghishani = new Customer("ghishani", 200);
     }
 
     @Test
-    public void hasWallet(){
+    public void hasName(){
+        assertThat(ghishani.getName()).isEqualTo("ghishani");
 
+    }
+
+    @Test
+    public void canGetWallet(){
+        assertThat(ghishani.getName()).isEqualTo(200);
     }
 }
