@@ -10,6 +10,13 @@ public class Artist {
 
     }
     public String getName(){
+
         return this.name;
     }
+
+    public void setName(String newName){
+        this.name = newName;
+
+    }
+
 }

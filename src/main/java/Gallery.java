@@ -4,11 +4,11 @@ import java.util.List;
 public class Gallery {
     //properties
     private String name;
-    private double till;
+    private int till;
     private List<Artwork> stock;
 
     //constructor
-    public Gallery(String name, double till){
+    public Gallery(String name, int till){
         this.name = name;
         this.till = till;
         this.stock = new ArrayList<>();
@@ -17,8 +17,13 @@ public class Gallery {
     public String getName(){
         return this.name;
     }
+
     public double getTill(){
         return this.till;
+    }
+
+    public void setTill(int amount) {
+        this.till = amount;
     }
 
     public List<Artwork> getStock(){

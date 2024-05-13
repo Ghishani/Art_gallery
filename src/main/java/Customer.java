@@ -18,10 +18,20 @@ public class Customer {
 
         return this.name;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public double getWallet(){
 
         return this.wallet;
     }
+
+    public void setWallet(double wallet) {
+        this.wallet = wallet;
+    }
+
     public void buyArtwork(Artwork artwork){
         artCollection.add(artwork);
         wallet -=artwork.getPrice();
