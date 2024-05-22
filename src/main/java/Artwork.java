@@ -11,29 +11,20 @@ public class Artwork {
         this.artist = artist;
         this.price = price;
     }
+
+    //Getters and Setters
     public String getTitle(){
 
         return this.title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getArtist(){
-        return this.artist;
-    }
 
-    public void setArtist(String artist) {
-        this.artist = artist;
+        return this.artist;
     }
 
     public double getPrice(){
 
         return this.price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
     }
 }

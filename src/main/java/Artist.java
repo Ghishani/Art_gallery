@@ -13,10 +13,4 @@ public class Artist {
 
         return this.name;
     }
-
-    public void setName(String newName){
-        this.name = newName;
-
-    }
-
 }

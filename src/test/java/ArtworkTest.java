@@ -9,7 +9,7 @@ public class ArtworkTest {
 
     @BeforeEach
     public void setup(){
-        monaLisa = new Artwork("Mona Lisa","Da Vinchi", 100);
+        monaLisa = new Artwork("Mona Lisa","Da Vinci", 20_000_000);
     }
 
     @Test
@@ -19,11 +19,11 @@ public class ArtworkTest {
 
     @Test
     public void hasArtist(){
-        assertThat(monaLisa.getArtist()).isEqualTo("Da vinchi");
+        assertThat(monaLisa.getArtist()).isEqualTo("Da Vinci");
     }
 
     @Test
     public void hasPrice(){
-        assertThat(monaLisa.getPrice()).isEqualTo(150);
+        assertThat(monaLisa.getPrice()).isEqualTo(20_000_000);
     }
 }

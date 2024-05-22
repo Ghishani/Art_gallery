@@ -6,7 +6,7 @@ public class Customer {
     //properties
     private String name;
     private double wallet;
-    private List<Artwork> artCollection;
+    private ArrayList<Artwork> artCollection;
 
     //constructor
     public Customer (String name, double wallet){
@@ -14,6 +14,21 @@ public class Customer {
         this.wallet = wallet;
         this.artCollection = new ArrayList<>();
     }
+    public boolean canBuy(Artwork artwork){
+        if (artwork.getPrice() <= this.wallet){
+            return true;
+        }
+        return false;
+    }
+    public void buyArtwork(Artwork artwork){
+        this.wallet -= artwork.getPrice();
+        this.artCollection.add(artwork);
+    }
+    public int getArtworkCount(){
+        return this.artCollection.size();
+    }
+
+    //Getters and setters
     public String getName(){
 
         return this.name;
@@ -32,8 +47,4 @@ public class Customer {
         this.wallet = wallet;
     }
 
-    public void buyArtwork(Artwork artwork){
-        artCollection.add(artwork);
-        wallet -=artwork.getPrice();
-    }
 }
